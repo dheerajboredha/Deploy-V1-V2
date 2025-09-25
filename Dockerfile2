@@ -1,0 +1,6 @@
+FROM nginx:latest
+RUN apt update && apt install -y unzip wget \
+    && wget https://templatemo.com/tm-zip-files-2020/templatemo_596_electric_xtra.zip
+RUN unzip templatemo_596_electric_xtra.zip \
+    && cp -r templatemo_596_electric_xtra/* /usr/share/nginx/html/
+EXPOSE 80

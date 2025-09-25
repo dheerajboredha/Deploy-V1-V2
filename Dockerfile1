@@ -1,0 +1,5 @@
+FROM nginx:latest
+RUN apt update && apt install -y unzip wget && wget https://templatemo.com/tm-zip-files-2020/templatemo_595_3d_coverflow.zip
+RUN unzip templatemo_595_3d_coverflow.zip \
+    && cp -r templatemo_595_3d_coverflow/* /usr/share/nginx/html/
+EXPOSE 80
