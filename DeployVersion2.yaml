@@ -24,7 +24,7 @@ spec:
       - key: frontend
         operator: Exists
   strategy: 
-    type: RollingUpdate
+    type: rollingUpdate
     rollingUpdate: 
       maxSurge: 1
       maxUnavailable: 1
@@ -38,7 +38,7 @@ spec:
     spec:
       containers:
         - name: mydeploycon
-          image: dheeraj6281/mytemplate:latest
+          image: dheeraj6281/version2-deploy:2.0
           ports:
             - name: yelloapp-ports
               containerPort: 80
